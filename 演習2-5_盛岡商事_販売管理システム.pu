@@ -1,0 +1,9 @@
+@startuml ユースケース図
+actor 担当者 #000000;line:black;line.bold;
+rectangle  ATM {
+usecase (注文商品を\nシステムで確認) as confirm
+usecase (商品の出荷状況を\nシステムに登録) as input
+}
+担当者 --> confirm
+担当者 --> input
+@enduml
