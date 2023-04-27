@@ -1,0 +1,37 @@
+' @startuml a
+' class Word {
+' ---
+' + enter():void
+' }
+' class Excel {
+' ---
+' + enter():void
+' }
+' interface keyboard {
+' ' <<interface>>
+' ---
+' + enter():void
+' }
+' keyboard <|.. Word
+' keyboard <|.. Excel
+' class User {
+' }
+' keyboard <-up- User:<< use >>
+' @enduml
+
+@startuml aa
+class Word {
+---
++ enter():void
+}
+class Excel {
+---
++ enter():void
+}
+circle "keyboard" as I1
+Word --( I1
+Excel --( I1
+class User {
+}
+I1 <-- User:<< use >>
+@enduml

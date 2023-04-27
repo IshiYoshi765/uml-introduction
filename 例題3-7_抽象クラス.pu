@@ -1,0 +1,20 @@
+@startuml aa
+class Animal <<Abstract>> {
+---
++ Walk:void
++ {abstract} eat():int
++ {abstract} cry():void
+}
+class Dog {
+---
++ eat():int
++ cry():void
+}
+class Cat {
+---
++ eat():int
++ cry():void
+}
+Animal <|-down- Dog
+Animal <|-down- Cat
+@enduml

@@ -1,0 +1,7 @@
+@startuml ああ
+left to right direction
+パソコン"1" *-- ハードディスク
+note right of パソコン
+ハードディスクがないと成り立ちません。
+end note
+@enduml
