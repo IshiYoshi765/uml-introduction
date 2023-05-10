@@ -1,0 +1,11 @@
+@startuml a
+object 車体
+object "左前輪タイヤ" as a
+object "右前輪タイヤ" as b
+object "左後輪タイヤ" as c 
+object "右後輪タイヤ" as d
+車体--a 
+車体--b 
+車体--c 
+車体--d 
+@enduml
