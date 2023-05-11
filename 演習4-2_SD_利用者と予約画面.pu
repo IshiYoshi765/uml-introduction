@@ -1,5 +1,13 @@
 @startuml a
 hide footbox
-actor 利用者
-
+skinparam style strictuml /' 厳密なUMLに準拠する '/
+participant "利用者:入力画面" as a
+participant ":予約画面" as b
+activate a
+activate b
+a ->> b: ログインメッセージ取得（）
+b ->> b:確認 ()
+activate b
+deactivate b
+deactivate b
 @enduml
