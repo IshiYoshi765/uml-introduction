@@ -1,0 +1,27 @@
+@startuml a
+hide footbox
+actor ":会員" as user
+participant "商品検索画面" as a  <<boundary>>
+participant "商品検索" as b  <<control>>
+participant "商品" as c  <<entity>>
+participant "商品カテゴリ" as d <<entity>>
+
+activate user
+user -> a 
+activate a
+a -> b:商品検索(商品番号)
+activate b
+create c
+b -->> c: <<create>> 生成()
+loop 商品カテゴリ数
+create d
+b -->> d : <<create>> 生成()
+b -> c :商品カテゴリの設定()
+activate c 
+deactivate c 
+end loop
+b -->> a:商品情報
+deactivate b
+a -> a:商品を表示する(商品情報)
+activate a
+@enduml
