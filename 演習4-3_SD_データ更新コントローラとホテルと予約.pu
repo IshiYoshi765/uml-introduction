@@ -1,17 +1,17 @@
 @startuml a
 hide footbox
-participant "controller:データ更新コントローラ" as controller
-participant "hotel:ホテル" as hotel
-participant ":予約" as entity
-activate controller
-controller -> hotel : 1:予約操作を呼び出す()
+participant "データ更新コントローラ" as a
+participant "ホテル" as hotel
+participant "予約" as b 
+activate a 
+a -> hotel : 1:予約操作を呼び出す()
 activate hotel
-create entity
-hotel -> entity :1.1:作成()    
-hotel -> entity :1.2:予約登録を呼び出す()
-hotel <<-- entity :予約登録
-deactivate entity
-controller <<-- hotel:予約
+create b 
+hotel -> b :1.1:作成()    
+hotel -> b :1.2:予約登録を呼び出す()
+hotel <<-- b :予約登録
+deactivate b
+a <<-- hotel:予約
 deactivate hotel
-deactivate controller
+deactivate a
 @enduml
