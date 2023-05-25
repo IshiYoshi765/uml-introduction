@@ -1,0 +1,18 @@
+@startuml a
+    left to right direction
+    actor 利用者 as a
+    actor 看護師 as k
+    package 〇〇医院診察予約{
+        usecase メニュー
+        usecase 予約と確認
+        usecase 今の順番
+        usecase あなたの順番
+    }
+
+    a --> メニュー
+    a --> 予約と確認
+    a --> 今の順番
+    a --> あなたの順番
+    今の順番 <-- k
+
+@enduml
