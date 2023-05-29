@@ -1,0 +1,21 @@
+@startuml a
+hide footbox
+participant ":客" as a
+participant ":料金装置" as money
+participant ":ボタン" as b
+participant ":ベンダー装置" as c
+
+activate a
+a -> money :お金を入れる
+    activate money
+    money -> b :ボタンを選ぶ
+    activate b
+    b -> c :ボタンを押す
+    activate c
+    c -> c :ドリンクを探す
+    activate c
+    deactivate c
+    deactivate b
+    deactivate money
+    a <-- c :ドリンク    
+@enduml
