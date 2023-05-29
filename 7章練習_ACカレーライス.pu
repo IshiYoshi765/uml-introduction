@@ -1,0 +1,18 @@
+@startuml 並列処理
+title myカレー
+start
+:具材を切る;
+    note right
+    注釈
+    好きな大きさに★
+    end note
+fork
+:具材を焼く;
+:水とルーを入れる;
+:煮込む柔らかくなるまで煮込む;
+fork again
+:ご飯を炊く;
+end fork
+:盛り付ける;
+stop
+@enduml
