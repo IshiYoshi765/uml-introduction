@@ -1,0 +1,11 @@
+@startuml a
+actor ユーザ as a 
+actor 光センサー as b 
+actor 左右モータ as c 
+rectangle ライントレーサー{
+    usecase ライン上を進む
+}
+a --> ライン上を進む
+ライン上を進む <-- b
+ライン上を進む <-- c
+@enduml
