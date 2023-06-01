@@ -1,0 +1,13 @@
+@startuml 注釈
+title 注釈の書き方
+    start
+    :野菜を洗う;
+    -> 洗剤で洗うのはＮＧ;
+    :野菜を切る;
+    note right
+    注釈
+    好きな大きさに★
+    end note
+    :焼く;
+    stop
+@enduml
