@@ -33,4 +33,5 @@ fork
     |顧客|
     :商品を受け取る;
 stop
+
 @enduml
